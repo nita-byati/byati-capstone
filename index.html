@@ -6,6 +6,79 @@
     <title>Reduce by Reuse</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modal styles for expandable media */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            cursor: default;
+        }
+        
+        .modal-content img,
+        .modal-content video {
+            max-width: 100%;
+            max-height: 90vh;
+            display: block;
+            border-radius: 4px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+        }
+        
+        /* Media item cursor styles */
+        .gallery img,
+        .gallery video,
+        .screenshot-gallery img {
+            cursor: pointer;
+        }
+        
+        /* GIF styles */
+        .gif-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .gif-container::after {
+            content: 'GIF';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -45,7 +118,7 @@
                         <p>Working alongside my UX/UI partner Warren Goodell, I helped create an intuitive and engaging user experience while developing cohesive marketing materials that effectively communicated our project's value proposition.</p>
                     </div>
                     <div class="about-image">
-                        <img src="images/updatedlogo.png" alt="images/updatedlogo.png">
+                        <img src="images/updatedlogo.png" alt="images/updatedlogo.png" class="medium-image">
                     </div>
                 </div>
                 
@@ -60,6 +133,79 @@
                 </div>
             </div>
         </section>
+        <section id="process" class="process">
+            <div class="container">
+                <h2>Trying to Work with CU Boulder</h2>
+                
+                <div class="contribution-area ux-ui">
+                    <h3>Initial Ideas</h3>
+                    <p class="area-description">At first we wanted to work with CU Boulder to have a website that is directly linked to some part of CU's website. We created design systems and wireframes based on CU's. However, with much effort to get in contact with them and work with them, we were unsuccessful. We then decided to scrap our original idea and go rogue--making a design system and website we actually like.</p>
+                    
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <div class="step-content">
+                            <h3>User Research</h3>
+                            <p>We conducted user interviews and surveys to understand our target audience, creating detailed personas that guided our design decisions. This research revealed key pain points and opportunities that shaped our approach.</p>
+                            <div class="gallery">
+                                <a href="https://www.dropbox.com/scl/fo/8u1gd48xyfmc7ors6o4nh/AEiadcH9f_fm-DF9KUCZn7g?rlkey=clavfh8pcrs6fh41unzfoyo5f&st=ntvm7qjj&dl=0" target="_blank" rel="noopener noreferrer" class="cta-button">View Interviews</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <div class="step-content">
+                            <h3>Information Architecture & Wireframes</h3>
+                            <p>I developed the site structure and user flows, creating low-fidelity wireframes that established the foundation for our interface design. This involved multiple iterations based on team feedback and user testing.</p>
+                            <div class="gallery">
+                                <img src="images/user flow 1.png" alt="User flow" class="large-image">
+                                <img src="images/low fid.png" alt="Wireframes" class="large-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <div class="step-content">
+                            <h3>UI Design System</h3>
+                            <p>I created a comprehensive design system including typography and color palette.This system ensured visual consistency while accommodating accessibility requirements.</p>
+                            <div class="gallery">
+                                <img src="images/designsystem.png" alt="Design System">
+                                <!-- Video to GIF element on line 113 -->
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <div class="step-content">
+                            <h3>Prototyping & User Testing</h3>
+                            <p>I developed interactive prototypes in Figma and conducted usability testing sessions, analyzing feedback to refine the design. This iterative process helped identify and resolve usability issues before development.</p>
+                            <div class="gallery">
+                                <img src="/api/placeholder/450/300" >
+                                <img src="/api/placeholder/450/300" >
+                                <div class="gif-container">
+                                    <video id="design-process-video" width="450" height="300" muted loop>
+                                        <source src="videos/Screen Recording 2025-03-12 at 9.57.38 AM.mov" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    </div>
+
+
+                                        <div class="gif-container">
+                                            <video id="design-process-video" width="450" height="300" muted loop>
+                                                <source src="videos/vid2.mov" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+             
 
         <!-- My Contributions Section -->
         <section id="process" class="process">
@@ -76,7 +222,7 @@
                             <h3>User Research</h3>
                             <p>We conducted user interviews and surveys to understand our target audience, creating detailed personas that guided our design decisions. This research revealed key pain points and opportunities that shaped our approach.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="User Personas">
+                                <a href="https://www.dropbox.com/scl/fo/8u1gd48xyfmc7ors6o4nh/AEiadcH9f_fm-DF9KUCZn7g?rlkey=clavfh8pcrs6fh41unzfoyo5f&st=ntvm7qjj&dl=0" target="_blank" rel="noopener noreferrer" class="cta-button">View Interviews</a>
                             </div>
                         </div>
                     </div>
@@ -87,8 +233,8 @@
                             <h3>Information Architecture & Wireframes</h3>
                             <p>I developed the site structure and user flows, creating low-fidelity wireframes that established the foundation for our interface design. This involved multiple iterations based on team feedback and user testing.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="Site Map">
-                                <img src="/api/placeholder/300/200" alt="Wireframes">
+                                <img src="images/user flow 1.png" alt="User flow" class="large-image">
+                                <img src="images/low fid.png" alt="Wireframes" class="large-image">
                             </div>
                         </div>
                     </div>
@@ -97,10 +243,12 @@
                         <div class="step-number">03</div>
                         <div class="step-content">
                             <h3>UI Design System</h3>
-                            <p>I created a comprehensive design system including typography, color palette, component library, and interaction patterns. This system ensured visual consistency while accommodating accessibility requirements.</p>
+                            <p>I created a comprehensive design system including typography and color palette.This system ensured visual consistency while accommodating accessibility requirements.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="Design System">
-                                <img src="/api/placeholder/300/200" alt="Component Library">
+                                <img src="images/designsystem.png" alt="Design System">
+                                <!-- Video to GIF element on line 113 -->
+                            
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -111,8 +259,22 @@
                             <h3>Prototyping & User Testing</h3>
                             <p>I developed interactive prototypes in Figma and conducted usability testing sessions, analyzing feedback to refine the design. This iterative process helped identify and resolve usability issues before development.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="Prototype Screens">
-                                <img src="/api/placeholder/300/200" alt="User Testing Sessions">
+                                <img src="/api/placeholder/450/300" >
+                                <img src="/api/placeholder/450/300" >
+                                <div class="gif-container">
+                                    <video id="design-process-video" width="450" height="300" muted loop>
+                                        <source src="videos/Screen Recording 2025-03-12 at 9.57.38 AM.mov" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    </div>
+
+
+                                        <div class="gif-container">
+                                            <video id="design-process-video" width="450" height="300" muted loop>
+                                                <source src="videos/vid2.mov" type="video/mp4">
+                                                Your browser does not support the video tag.
+                                            </video>
                             </div>
                         </div>
                     </div>
@@ -129,8 +291,8 @@
                             <h3>Brand Identity Development</h3>
                             <p>I created a distinctive brand identity including logo, color scheme, typography, and voice guidelines. This consistent visual language strengthened brand recognition across all marketing touchpoints.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="Logo Variations">
-                                <img src="/api/placeholder/300/200" alt="Brand Guidelines">
+                                <img src="/api/placeholder/450/300" alt="Logo Variations">
+                                <img src="/api/placeholder/450/300" alt="Brand Guidelines">
                             </div>
                         </div>
                     </div>
@@ -141,8 +303,8 @@
                             <h3>Marketing Collateral</h3>
                             <p>I designed promotional materials including digital assets, presentation decks, and social media content. These materials effectively communicated our project's value proposition and core features.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="Social Media Graphics">
-                                <img src="/api/placeholder/300/200" alt="Presentation Design">
+                                <img src="/api/placeholder/450/300" alt="Social Media Graphics">
+                                <img src="/api/placeholder/450/300" alt="Presentation Design">
                             </div>
                         </div>
                     </div>
@@ -153,8 +315,8 @@
                             <h3>Campaign Strategy</h3>
                             <p>I developed a multi-channel marketing strategy with targeted messaging for different audience segments. This included content planning, release scheduling, and performance metrics to measure effectiveness.</p>
                             <div class="gallery">
-                                <img src="/api/placeholder/300/200" alt="Campaign Timeline">
-                                <img src="/api/placeholder/300/200" alt="Audience Segments">
+                                <img src="/api/placeholder/450/300" alt="Campaign Timeline">
+                                <img src="/api/placeholder/450/300" alt="Audience Segments">
                             </div>
                         </div>
                     </div>
@@ -248,16 +410,15 @@
                 <div class="project-screenshots">
                     <h3>Final Project Visual Highlights</h3>
                     <div class="screenshot-gallery">
-                        <img src="/api/placeholder/400/250" alt="Home Screen Design">
-                        <img src="/api/placeholder/400/250" alt="Feature Interface">
-                        <img src="/api/placeholder/400/250" alt="Mobile Responsiveness">
-                        <img src="/api/placeholder/400/250" alt="Marketing Materials">
+                        <img src="/api/placeholder/550/350" alt="Home Screen Design">
+                        <img src="/api/placeholder/550/350" alt="Feature Interface">
+                        <img src="/api/placeholder/550/350" alt="Mobile Responsiveness">
+                        <img src="/api/placeholder/550/350" alt="Marketing Materials">
                     </div>
                 </div>
             </div>
         </section>
-
-       
+    </main>
 
     <footer>
         <div class="container">
@@ -265,6 +426,105 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Modal for expandable media -->
+    <div class="modal-overlay" id="mediaModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation toggle for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            
+            if (burger) {
+                burger.addEventListener('click', function() {
+                    nav.classList.toggle('nav-active');
+                });
+            }
+            
+            // Convert video to GIF functionality
+            const videoElement = document.getElementById('design-process-video');
+            if (videoElement) {
+                // Start playing the video to simulate GIF behavior
+                videoElement.play();
+                
+                // Handle video click to pause/play (like a GIF)
+                videoElement.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent modal from opening when controlling play/pause
+                    if (videoElement.paused) {
+                        videoElement.play();
+                    } else {
+                        videoElement.pause();
+                    }
+                });
+            }
+            
+            // Expandable media functionality
+            const modal = document.getElementById('mediaModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeButton = document.querySelector('.close-modal');
+            
+            // Function to open modal with media content
+            function openModal(mediaElement) {
+                let clonedElement;
+                
+                if (mediaElement.tagName === 'IMG') {
+                    clonedElement = document.createElement('img');
+                    clonedElement.src = mediaElement.src;
+                    clonedElement.alt = mediaElement.alt;
+                } else if (mediaElement.tagName === 'VIDEO') {
+                    clonedElement = document.createElement('video');
+                    clonedElement.src = mediaElement.querySelector('source').src;
+                    clonedElement.controls = true;
+                    clonedElement.autoplay = true;
+                    clonedElement.loop = true;
+                }
+                
+                modalContent.innerHTML = '';
+                modalContent.appendChild(clonedElement);
+                modal.style.display = 'flex';
+            }
+            
+            // Handle click on images
+            document.querySelectorAll('.gallery img, .screenshot-gallery img').forEach(img => {
+                img.addEventListener('click', function() {
+                    openModal(this);
+                });
+            });
+            
+            // Add click event for video (not the video element itself, which has play/pause)
+            document.querySelectorAll('.gif-container').forEach(container => {
+                container.addEventListener('click', function(e) {
+                    if (e.target === this) { // Only open modal if clicking on container, not video
+                        const video = this.querySelector('video');
+                        openModal(video);
+                    }
+                });
+            });
+            
+            // Close modal when clicking X button
+            closeButton.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside the content
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
